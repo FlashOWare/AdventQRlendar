@@ -1,0 +1,12 @@
+﻿@page "/qrcodes"
+
+<PageTitle>QR Codes</PageTitle>
+
+<h1>QR Codes</h1>
+
+<button class="btn btn-secondary mb-3" @onclick="OnFill">Fill</button>
+
+@foreach(Door door in QRlendar.Doors)
+{
+	<QRCodeItem Door="@door"></QRCodeItem>
+}

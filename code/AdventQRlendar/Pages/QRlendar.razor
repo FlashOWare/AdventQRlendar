@@ -1,0 +1,40 @@
+﻿@page "/qrlendar"
+
+<HeadContent>
+    <link href='https://fonts.googleapis.com/css?family=Festive' rel='stylesheet'>
+</HeadContent>
+
+<PageTitle>Advent QRlendar</PageTitle>
+
+<h1>Advent QRlendar</h1>
+
+<button class="btn btn-secondary mb-3" @onclick="OnShuffle">Shuffle</button>
+<button class="btn btn-secondary mb-3" @onclick="OnPrintAsync">Print</button>
+
+<table class="tableimage">
+    @foreach(var row in @QRlendarService.GetGrid())
+    {
+        <tr>
+        @foreach(var door in row)
+        {
+           <td class="box">
+               <span class="door border border-start-0">@door.Number</span>
+           </td>
+        }
+        </tr>
+    }
+</table>
+
+<div class="pagebreak"></div>
+
+<table class="tableqrcode">
+    @foreach(var row in @QRlendarService.GetGrid())
+    {
+        <tr>
+        @foreach(var door in row)
+        {
+            <QRCodeBox Door="@door" @key="door" />
+        }
+        </tr>
+    }
+</table>

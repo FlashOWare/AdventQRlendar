@@ -1,0 +1,10 @@
+﻿<table>
+	<tr>
+		<td>@Door.Number</td>
+		<td><img @ref="qrCodeElement" /></td>
+		<td>
+			<input value="@Door.Url"
+				@onchange="OnUrlChangedAsync" />
+		</td>
+	</tr>
+</table>

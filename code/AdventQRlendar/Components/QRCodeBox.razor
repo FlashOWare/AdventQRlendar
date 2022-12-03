@@ -1,0 +1,14 @@
+﻿<td class="box">
+    @if (Door.IsSet())
+    {
+        <span class="doorqr">
+            <img @ref=qrCodeElement />
+        </span>
+    }
+    else
+    {
+        <span class="doornumber">
+            @Door.Number
+        </span>
+    }
+</td>

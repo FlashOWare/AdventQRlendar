@@ -1,0 +1,66 @@
+﻿.box {
+    width: 100px;
+    height: 100px;
+    border: solid;
+    text-align: center;
+}
+
+table {
+    font-family: 'Festive';
+    border-collapse: collapse;
+}
+
+td {
+    border-style: hidden !important;
+    font-size: 40px;
+    color: white;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.door {
+    width: 3.6cm;
+    height: 3.6cm;
+    margin: 20px 30px 20px 30px;
+    padding: 35px 40px 40px 50px;
+    display: flex;
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black, -1px 1px 5px black, 1px -1px 5px black;
+}
+
+.tableimage {
+    width: 21cm;
+    height: 29.7cm;
+
+    background-size: 21cm auto;
+    background-repeat: no-repeat;
+    background-image: url("https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    border-collapse: collapse;
+}
+
+.tableqrcode {
+    width: 21cm;
+    height: 29.7cm;
+
+    border-collapse: collapse;
+}
+
+.info {
+    font-size: 4px;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .pagebreak {
+        /*page-break-after: always;*/
+        page-break-before: always;
+    }
+
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+}

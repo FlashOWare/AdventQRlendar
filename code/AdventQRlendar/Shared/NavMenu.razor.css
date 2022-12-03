@@ -1,0 +1,5 @@
+@media print {
+    .navigation {
+        display: none !important;
+    }
+}
